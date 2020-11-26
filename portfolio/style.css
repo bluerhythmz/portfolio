@@ -13,11 +13,10 @@ body {
 }
 
 .loader {
-    visibility: hidden;
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 100;
+    z-index: 1111100;
     background: linear-gradient(to right,#0014a8, black);
     height: 100%;
     width: 100%;
@@ -73,7 +72,6 @@ h1::before {
 }
 
 .intro {
-    visibility: hidden;
     position: fixed;
     height: 100%;
     width: 100%;
@@ -86,7 +84,7 @@ h1::before {
     align-items: center;
     flex-direction: column;
     transition: all .4s linear;
-    z-index: 11111;
+    z-index: 111111;
 }
 
 .intro img {
@@ -215,7 +213,10 @@ h1::before {
 }
 
 .content {
-    background: linear-gradient(rgba(0,0,80,0.9), rgba(0,0,0,0.9)),url(forest.gif);
+    background: linear-gradient(rgba(0,0,80,0.7), rgba(0,0,0,0.7)),url(forest.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -264,7 +265,7 @@ h1::before {
     width: 60vw;
     color: white;
     position: relative;
-   transition: all 1s ease;
+   transition: all .5s ease;
 }
 
 .about-container h2 {
@@ -290,7 +291,7 @@ h1::before {
     position: absolute;
     left: 10;
     top: 30%;
-    transition: all 1s ease;
+    transition: all .5s ease;
 }
 
 .project-container h2 {
@@ -316,7 +317,7 @@ h1::before {
     position: absolute;
     left: 10;
     top: 30%;
-    transition: all 1s ease;
+    transition: all .5s ease;
 }
 
 .contact-container h2 {
@@ -347,4 +348,92 @@ h1::before {
 
 .active {
     opacity: 1;
+}
+
+.project {
+    background-color: rgba(0,0,0,0.4);
+    margin-top: 20px;
+    height: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+}
+
+.project h3 {
+    position: absolute;
+    top: 5%;
+    left: 13%;
+    border-bottom: 2px solid white;
+}
+
+.project-a {
+    height: 70%;
+    width: 20%;
+    border-radius: 10px;
+    background: linear-gradient( rgba(0,0,0,0.1), rgba(0,0,0,0.1)),url('project1.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: default;
+    z-index: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.project-a i {
+    margin-right: 10px;
+    cursor: pointer;
+    transition: all .4s ease;
+}
+
+.project-a a {
+    text-decoration: none;
+    color: white;
+}
+
+.project-b {
+    height: 70%;
+    width: 20%;
+    background-color: ivory;
+    border-radius: 10px;
+    cursor: default;
+    z-index: 1;
+}
+
+.project-c {
+    height: 70%;
+    width: 20%;
+    background-color: ivory;
+    border-radius: 10px;
+    cursor: default;
+    z-index: 1;
+}
+
+.project-d {
+    height: 70%;
+    width: 20%;
+    background-color: ivory;
+    border-radius: 10px;
+    cursor: default;
+    z-index: 1;
+}
+
+.icon-hide {
+    opacity: 0;
+}
+
+.icon-show {
+    opacity: 1;
+}
+
+.background-dim {
+    background: linear-gradient( rgba(0,0,0,0.8), rgba(0,0,0,0.8)),url('project1.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
 }

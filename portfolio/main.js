@@ -8,10 +8,13 @@ let projectBtn = document.getElementById('project-btn')
 let projects = document.querySelector('.project-container')
 let contactBtn = document.getElementById('contact-btn')
 let contact = document.querySelector('.contact-container')
+let projectaIcons = document.querySelector('.project-a-icon')
+let projectaIcons2 = document.querySelector('.project-a-icon2')
+let projectA = document.querySelector('.project-a')
 
 startBtn.addEventListener('click', function() {
     intro.style.opacity = "0";
-    intro.style.zIndex = "0";
+    intro.style.zIndex = "-1";
     logo.style.bottom = "600px"
     mainPage.style.display = "block"
     mainPage.style.opacity = "1"
@@ -39,4 +42,20 @@ contactBtn.addEventListener('click', () => {
     projects.classList.remove('active')
     about.classList.remove('active')
     contact.classList.add('active')
+})
+
+projectA.addEventListener('mouseover', () => {
+    projectA.classList.add('background-dim')
+    projectaIcons.classList.add('icon-show')
+    projectaIcons.classList.remove('icon-hide')
+    projectaIcons2.classList.add('icon-show')
+    projectaIcons2.classList.remove('icon-hide')
+})
+
+projectA.addEventListener('mouseleave', () => {
+    projectA.classList.remove('background-dim')
+    projectaIcons.classList.add('icon-hide')
+    projectaIcons.classList.remove('icon-show')
+    projectaIcons2.classList.add('icon-hide')
+    projectaIcons2.classList.remove('icon-show')
 })
